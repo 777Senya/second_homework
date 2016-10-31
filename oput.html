@@ -10,17 +10,110 @@
             Заповніть данні про себе
         </mark>
     </h1>
-    <form method="POST" action="https://formspree.io/Senchina.yura@gmail.com">  
-        <label for="name">First name:</label>
-        <input type="text" name="name" id="name" placeholder="Your name" autofocus required pattern="[A-Za-zА-Яа-яЁёЇї]"/>
-        <br>
-        <label for="surname">Surname:</label>
-        <input type="text" name="surname" id="surname" placeholder="Your Surname" required pattern="[A-Za-zА-Яа-яЁёЇї]"/>
-        <br>
-        <label for="nickname">Nickname:</label>
-        <input type="text" name="nickname" id="nickname" placeholder="Nickname">
-        <br>
-        <input type="submit" name="submit" value="Send"/>
+    <form method="POST" action="https://formspree.io/Senchina.yura@gmail.com">
+        <ul>
+            <li>
+                <label for="name">First name:</label>
+                <input type="text" name="name" id="name" placeholder="Your name" autofocus required/>
+            </li>
+            <br>
+            <li>
+                <label for="surname">Surname:</label>
+                <input type="text" name="surname" id="surname" placeholder="Your Surname" required>
+            </li>
+            <br>
+            <li>
+                <label for="male">Male:</label>
+                <input type="radio" name="male" id="male" value="man" required>M
+                <input type="radio" name="male" id="male" value="female" required>F
+            </li>
+            <br>
+            <li>
+                <label for="date">Your birthday:</label>
+                <input type="date" name="date" id="date" required>
+                <br>
+            </li>
+            <br>
+            <li>
+                <label for="nickname">Nickname:</label>
+                <input type="text" name="nickname" id="nickname" placeholder="Nickname">
+            </li>
+            <br>
+            <li>
+                <label for="country">Country:</label>
+                <select required name="country">
+                     <option disabled selected>
+                        Select country
+                    </option>
+                    <option>
+                        Ukraine
+                    </option>
+                    <option>
+                        Poland
+                    </option>
+                    <option>
+                        Germany
+                    </option>
+                    <option>
+                        France
+                    </option>
+                    <option>
+                        England
+                    </option>
+                    <option>
+                        Italy
+                    </option>
+                </select>
+            </li>
+              <br>
+            <li>
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" placeholder="City" required>
+            </li>
+            <br>
+            <li>
+                <label for="carbrand">Mark your car:</label>
+                <input type="text" name="carbrand" id="carbrand" placeholder="BMW" required>
+            </li>
+            <br>
+            <li>
+                <label for="carmodel">Model yor car:</label>
+                <input type="text" name="carmodel" id="carmodel" placeholder="X6" required>
+            </li>
+            <br>
+            <li>
+                <label for="carnumber">Number yor car:</label>
+                <input type="text" name="carnumber" id="carnumber" placeholder="AA0000AA" pattern="[A-Z]{2}[0-9]{4}[A-Z]{2}" required>
+            </li>
+            <br>
+            <fieldset>
+            <legend>
+                Яке масло ви використовуйте для автомобіля:
+            </legend>
+                <label for="maslo"></label>
+                <input type="radio" name="maslo" id="maslo" value="maslo1" required>Mobile<br>
+                <input type="radio" name="maslo" id="maslo" value="maslo2" required>Castrol<br>
+                <input type="radio" name="maslo" id="maslo" value="maslo2" required>Shell<br>
+        </fieldset>
+            <br>
+            <li>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="this_is@example.com" required>
+            </li>
+            <br>
+            <li>
+                <label for="tel">Tel number:</label>
+                <input type="tel" name="tel" id="tel" placeholder="095-000-00-00" required pattern="[0-9]{10}">
+            </li>
+            <br>
+            <li>
+                <label for="comment">About yourself:</label>
+                <br>
+                <textarea rows="2" cols="40" name="comment" id="comment"></textarea>
+            </li>
+            <br>
+            <input type="submit" name="submit" value="Send"/>
+        </ul>
     </form>
 </body>
 </html>
